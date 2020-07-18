@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>proPets</groupId>
-	<artifactId>ProPetsGateway</artifactId>
+	<artifactId>ProPetsGatewayService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ProPetsGateway</name>
+	<name>ProPetsGatewayService</name>
 	<description>Zuul Gateway Service</description>
 
 	<properties>
@@ -32,10 +32,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
