@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
-import proPets.gateway.filters.pre.SimpleFilter;
+import proPets.gateway.filters.route.SimpleFilter;
 
 @EnableZuulProxy
 @EnableDiscoveryClient
