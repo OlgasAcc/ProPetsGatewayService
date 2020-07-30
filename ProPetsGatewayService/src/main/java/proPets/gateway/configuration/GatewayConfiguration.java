@@ -23,6 +23,11 @@ public class GatewayConfiguration {
 	public String getBaseJWTUrl() {
 		return baseJWTUrl;
 	}
+	
+	
+	
+	
+	
 
 //	 @Bean
 //	    @Primary
@@ -58,22 +63,6 @@ public class GatewayConfiguration {
 //	     bean.setOrder(0);
 //	     return bean;
 //	 }
-//
-//		@Bean
-//	    public PreFilter preFilter() {
-//	        return new PreFilter();
-//	    }
-//	    @Bean
-//	    public PostFilter postFilter() {
-//	        return new PostFilter();
-//	    }
-//	    @Bean
-//	    public ErrorFilter errorFilter() {
-//	        return new ErrorFilter();
-//	    }
-//	    @Bean
-//	    public RouteFilter routeFilter() {
-//	        return new RouteFilter();
-//	    }
+
 
 }
