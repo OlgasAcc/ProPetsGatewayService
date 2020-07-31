@@ -42,7 +42,7 @@ public class JWTPreZuulFilter extends ZuulFilter {
 //
 //		} else {
 
-			if (!checkPointCut(path, method) && !checkStartPathAdditional(path)) {
+			if (!path.startsWith("/account") && !checkPointCut(path, method) && !checkStartPathAdditional(path)) {
 				if (auth.startsWith("Bearer")) {
 					System.out.println("here");
 					String newToken;
