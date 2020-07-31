@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -37,11 +36,11 @@ public class JWTPreZuulFilter extends ZuulFilter {
 		String auth = req.getHeader("Authorization");
 		String method = req.getMethod();
 
-		if (auth == null && !path.contains("sign_in")) {
-			ctx.unset();
-			ctx.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
-
-		} else {
+//		if (auth == null && !path.contains("sign_in")) {
+//			ctx.unset();
+//			ctx.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
+//
+//		} else {
 
 			if (!checkPointCut(path, method) && !checkStartPathAdditional(path)) {
 				if (auth.startsWith("Bearer")) {
@@ -67,7 +66,7 @@ public class JWTPreZuulFilter extends ZuulFilter {
 					}
 				}
 			}
-		}
+//		}
 		System.out.println("validation filter did not work");
 		return null;
 	}
