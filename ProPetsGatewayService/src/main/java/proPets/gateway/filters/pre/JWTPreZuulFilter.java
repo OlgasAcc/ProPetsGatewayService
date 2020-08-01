@@ -33,6 +33,7 @@ public class JWTPreZuulFilter extends ZuulFilter {
 		HttpServletRequest req = ctx.getRequest();
 		HttpServletResponse resp = ctx.getResponse();
 		String path = req.getContextPath();
+		System.out.println(path);
 		String auth = req.getHeader("Authorization");
 		String method = req.getMethod();
 
@@ -42,7 +43,7 @@ public class JWTPreZuulFilter extends ZuulFilter {
 //
 //		} else {
 
-			if (!path.startsWith("/account") && !checkPointCut(path, method) && !checkStartPathAdditional(path)) {
+			if (!path.contains("account") && !checkPointCut(path, method) && !checkStartPathAdditional(path)) {
 				if (auth.startsWith("Bearer")) {
 					System.out.println("here");
 					String newToken;
@@ -81,7 +82,7 @@ public class JWTPreZuulFilter extends ZuulFilter {
 
 	// might be false
 	private boolean checkStartPathAdditional(String path) {
-		boolean check = path.startsWith("/account") || path.startsWith("/send") || path.startsWith("/search")
+		boolean check = path.contains("account") || path.contains("send") || path.contains("search")
 				|| path.startsWith("/convert") || path.startsWith("/lostFound/lost/v1/all_matched")
 				|| path.startsWith("/lostFound/lost/v1/new_matched") || path.startsWith("lost/v1/accessCode");
 		check = check || path.startsWith("/lostFound/found/v1/all_matched")
