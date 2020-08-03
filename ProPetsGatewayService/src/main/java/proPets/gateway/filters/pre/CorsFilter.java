@@ -52,7 +52,7 @@ public class CorsFilter extends ZuulFilter {
 
 	@Override
 	public int filterOrder() {
-		return 5;
+		return 6;
 	}
 
 	@Override
