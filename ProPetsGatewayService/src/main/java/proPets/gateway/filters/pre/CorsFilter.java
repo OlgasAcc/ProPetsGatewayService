@@ -27,8 +27,8 @@ public class CorsFilter extends ZuulFilter {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, OPTIONS, DELETE");
 		response.setHeader("Access-Control-Allow-Headers",
-				"Authorization, X-Token, X-id, Origin, Content-Type, Accept");
-		response.setHeader("Access-Control-Expose-Headers", "Authorization, xsrf-token, X-Token, X-id");
+				"Authorization, X-token, X-id, Origin, Content-Type, Accept");
+		response.setHeader("Access-Control-Expose-Headers", "Authorization, xsrf-token, X-token, X-id");
 		response.setHeader("Access-Control-Max-Age", "3600");
 
 		if ("OPTIONS".equalsIgnoreCase(RequestContext.getCurrentContext().getRequest().getMethod())) {
@@ -39,10 +39,8 @@ public class CorsFilter extends ZuulFilter {
 			response.setStatus(HttpServletResponse.SC_OK);
 			ctx.unset();
 			ctx.setResponseStatusCode(HttpStatus.OK.value());
-			return null;
-		} else {
-			return null;
-		}
+		} 
+		return null;
 	}
 
 	@Override
