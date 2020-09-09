@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.ClientHttpResponse;
 
-@Configuration
+//@Configuration
 public class HystrixFallbackConfiguration {
 	
 	@Bean

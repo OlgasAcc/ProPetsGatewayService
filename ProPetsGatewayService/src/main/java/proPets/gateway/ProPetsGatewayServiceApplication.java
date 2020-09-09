@@ -21,9 +21,8 @@ public class ProPetsGatewayServiceApplication {
 		SpringApplication.run(ProPetsGatewayServiceApplication.class, args);
 	}
 	
-	@RequestMapping("/timeout")
-    public String timeout() throws InterruptedException {
-        Thread.sleep(80000);
-        return "timeout";
-    }
+	/*
+	 * @RequestMapping("/timeout") public String timeout() throws
+	 * InterruptedException { Thread.sleep(80000); return "timeout"; }
+	 */
 }
